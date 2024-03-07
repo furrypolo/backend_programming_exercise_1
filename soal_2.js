@@ -21,27 +21,6 @@ const students = [
   },
 ];
 
-students.sort(() => {
-    const place=[' '];
-    const replace=[' '];
-    let max=0;
-    let min=0;
-    let num=0;
-    for(let i=0; i<students.length; i++){
-        if(i===students.length);
-        let max=i;
-        for(let x=i; x<students.length; x++){
-            if(students[x].score>students[max].score){
-                place[0]=students[max];
-                num=max;
-                max=x;
-            }
-        }
-        console.log(students[max].score);
-        students[i]=students[max];
-        students[num]=place[0];
-    }
-
-}); 
+students.sort((a,b) => b.score-a.score); 
 
 console.log(students);
